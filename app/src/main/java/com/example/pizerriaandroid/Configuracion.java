@@ -1,15 +1,14 @@
 package com.example.pizerriaandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class Configuracion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Login login = new Login();
+        setContentView(R.layout.activity_configuracion);
+
     }
 }
