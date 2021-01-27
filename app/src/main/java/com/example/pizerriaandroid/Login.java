@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if((email.getText() != null) && (password.getText() != null)){
-                    Intent intent = new Intent (getApplicationContext(), PantallaPrincipal.class);
+                    Intent intent = new Intent(getApplicationContext(), PantallaPrincipal.class);
                     startActivity(intent);
                 }
             }

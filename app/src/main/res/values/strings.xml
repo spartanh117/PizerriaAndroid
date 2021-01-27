@@ -112,6 +112,8 @@
     <string name="check_peperoni">Peperoni</string>
     <string name="check_anchoas">Anchoas</string>
     <string name="check_champinnones">Champiñones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
