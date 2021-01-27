@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Pedido extends AppCompatActivity {
-    Button favorita,predeterminada,personalizada
+    Button favorita,predeterminada,personalizada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
