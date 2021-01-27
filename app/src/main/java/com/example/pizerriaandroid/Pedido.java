@@ -7,35 +7,41 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class Pedido extends AppCompatActivity {
-    Button favorita,predeterminada,personalizada;
+    TabLayout tabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedido);
-        favorita = (Button)findViewById(R.id.btnFavorita);
-        favorita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        tabs = (TabLayout) findViewById(R.id.tabs);
+        tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
 
-            }
-        });
-        predeterminada = (Button)findViewById(R.id.btnPredeterminada);
-        predeterminada.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(),Predeterminadas.class);
-                startActivity(intent);
-            }
-        });
-        personalizada = (Button)findViewById(R.id.btnPersonalizadas);
-        personalizada.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(),Personalizadas.class);
-                startActivity(intent);
-            }
-        });
+        tabs.setOnTabSelectedListener(
+                new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        if(tab.isSelected()){
+                            tab.setCustomView(R.layout.fragment_personalizada);
+                        }
+                    }
+
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {
+                        if(tab.isSelected()){
+                            tab.setCustomView(R.layout.fragment_personalizada);
+                        }
+                    }
+
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {
+                        if(tab.isSelected()){
+                            tab.setCustomView(R.layout.fragment_personalizada);
+                        }
+                    }
+                }
+        );
     }
 }

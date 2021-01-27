@@ -91,4 +91,27 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="action_Login">Iniciar Sesion</string>
+    <string name="tab_predefinidas">Predefinidas</string>
+    <string name="tab_favorita">Favorita</string>
+    <string name="tab_personalizadas">Personalizadas</string>
+    <string name="pizeria">Pizeria</string>
+    <string name="label_listaPizzas">ListaPizzas</string>
+    <string name="label_tamanno">Tamaño</string>
+    <string name="label_Ingredientes">Ingredientes</string>
+    <string name="radio_pequenna">Pequeña</string>
+    <string name="radio_mediana">Mediana</string>
+    <string name="radio_grande">Grande</string>
+    <string name="radio_familiar">Familiar</string>
+    <string name="radio_xxl">Giant SUPER XXL</string>
+    <string name="check_queso">Queso</string>
+    <string name="check_bacon">Bacon</string>
+    <string name="check_JamonYork">Jamón York</string>
+    <string name="check_pinna">Piña</string>
+    <string name="check_cebolla">Cebolla</string>
+    <string name="check_peperoni">Peperoni</string>
+    <string name="check_anchoas">Anchoas</string>
+    <string name="check_champinnones">Champiñones</string>
+
+
 </resources>
