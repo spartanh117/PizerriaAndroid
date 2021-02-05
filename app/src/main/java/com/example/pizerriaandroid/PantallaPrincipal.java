@@ -25,8 +25,7 @@ public class PantallaPrincipal extends AppCompatActivity {
             pedir.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    intent = new Intent (getApplicationContext(),Pedido.class);
-                    startActivity(intent);
+                    startActivity(new Intent (getApplicationContext(),Pedido.class));
                 }
             });
 

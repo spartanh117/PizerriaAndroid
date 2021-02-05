@@ -43,16 +43,17 @@ public class PredeterminadasFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DAO = new DAOPizzas();
-        listview = (ListView)listview.findViewById(R.id.list);
-        adapter = new ArrayAdapter<String>(this,R.layout.fragment_predeterminadas,DAO.mostrar());
-        listview.setAdapter(adapter);
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_predeterminadas, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_predeterminadas, container, false);
+        DAO = new DAOPizzas();
+        listview = (ListView)view.findViewById(R.id.list);
+        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,DAO.mostrar());
+        listview.setAdapter(adapter);
+        return view;
     }
 }
