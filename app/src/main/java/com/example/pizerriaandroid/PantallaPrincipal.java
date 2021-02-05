@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PantallaPrincipal extends AppCompatActivity {
         ImageButton backButon,configuracion;
         Button pedir;
-        Intent intent;
 
 
         @Override
@@ -22,12 +21,27 @@ public class PantallaPrincipal extends AppCompatActivity {
             setContentView(R.layout.activity_pantalla_principal);
 
             setUpView();
+            backButon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent (getApplicationContext(),Login.class));
+                }
+            });
+
             pedir.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent (getApplicationContext(),Pedido.class));
                 }
             });
+
+            configuracion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent (getApplicationContext(),Configuracion.class));
+                }
+            });
+
 
 
         }

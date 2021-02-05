@@ -21,6 +21,6 @@ public class DAOPizzas {
     }
 
     public List<Pizza> getListaPizza() {
-        return this.ListaPizza.subList(0,ListaPizza.size()-1);
+        return this.ListaPizza.subList(0,ListaPizza.size());
     }
 }

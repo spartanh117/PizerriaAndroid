@@ -15,7 +15,7 @@ public class Pedido extends AppCompatActivity {
    private TabLayout tabLayout;
    private ViewPager viewPager;
    private ViewPagerAdapter viewPagerAdapter;
-   private AppBarLayout appBarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class Pedido extends AppCompatActivity {
         tabLayout = (TabLayout)findViewById(R.id.tabs);
         viewPager = (ViewPager)findViewById(R.id.pager);
         viewPagerAdapter =  new ViewPagerAdapter(getSupportFragmentManager());
-        appBarLayout = (AppBarLayout)findViewById(R.id.appBarLayout);;
+
     }
 
     private void setUpViewPagerAdapter(){

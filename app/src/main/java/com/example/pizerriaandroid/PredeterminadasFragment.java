@@ -1,6 +1,7 @@
 package com.example.pizerriaandroid;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -54,6 +56,15 @@ public class PredeterminadasFragment extends Fragment {
         listview = (ListView)view.findViewById(R.id.list);
         adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,DAO.mostrar());
         listview.setAdapter(adapter);
+
+        listview.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Pizza prueab = DAO.getListaPizza().get(position);
+                new Confirmar(DAO.getListaPizza().get(position),getContext()).alert();
+            }
+        });
         return view;
     }
 }
