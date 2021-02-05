@@ -50,11 +50,6 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "nombre='" + nombre + '\'' +
-                ", tamnno='" + tamnno + '\'' +
-                ", precio=" + precio +
-                ", ingredientes=" + Arrays.toString(ingredientes) +
-                '}';
+        return  nombre  + ", " + tamnno + ", " + precio + "\n, ingredientes=" + Arrays.toString(ingredientes);
     }
 }
